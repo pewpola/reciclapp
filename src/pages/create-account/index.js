@@ -31,7 +31,7 @@ export default function CreateAccount({ navigation }) {
           placeholder="No minimo 8 caracteres"
           secureTextEntry={true}
         />
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CreateAccount')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
           <Text style={styles.buttonText}>Criar Conta</Text>
         </TouchableOpacity>
       </View>
