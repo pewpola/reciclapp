@@ -2,11 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-web';
 import Header from '../../components/header-principal';
+import HeaderPrincipal from '../../components/header-principal';
 
 export default function Home() {
     return (
         <View style={styles.home}>
-            <HeaderP
+            <HeaderPrincipal/>
         </View>
     )
 }
