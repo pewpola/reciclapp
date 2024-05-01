@@ -22,13 +22,13 @@ export default function CreateAccount({ navigation }) {
         <Text style={styles.nomeDoUsuarioOuEmail}>Senha:</Text>
         <TextInput
           style={styles.textInput}
-          placeholder="No minimo 8 caracteres"
+          placeholder="No mínimo 8 caracteres"
           secureTextEntry={true}
         />
         <Text style={styles.nomeDoUsuarioOuEmail}>Confirmar Senha</Text>
         <TextInput
           style={styles.textInput}
-          placeholder="No minimo 8 caracteres"
+          placeholder="No mínimo 8 caracteres"
           secureTextEntry={true}
         />
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
@@ -45,11 +45,12 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     backgroundColor: 'rgba(0, 212, 85, 0.5)',
     position: 'relative',
-    marginLeft: 1,
+    marginLeft: 20,
+    marginRight: 20,
     alignItems: 'center',
-    paddingTop: 40,
-    paddingBottom: 40,
-    paddingHorizontal: 25,
+    paddingTop: 30, // Reduzido o espaçamento
+    paddingBottom: 30, // Reduzido o espaçamento
+    paddingHorizontal: 20, // Reduzido o espaçamento
     width: 'auto',
   },
   telaDeLogin: {
@@ -63,14 +64,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 0,
-    width: 744,
+    paddingVertical: 24,
+    paddingHorizontal: 20,
+    width: '100%',
+    height: '100%',
   },
   hrAbaixoLogo: {
     backgroundColor: '#74DA0E',
     marginBottom: 30,
-    width: 744,
+    width: '100%',
     height: 5,
   },
   nomeDoUsuarioOuEmail: {
@@ -78,43 +80,43 @@ const styles = StyleSheet.create({
     overflowWrap: 'break-word',
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 25,
+    fontSize: 20, // Reduzido o tamanho da fonte
     color: '#FFFFFF',
   },
   textInput: {
     borderRadius: 16,
     backgroundColor: '#D9D9D9',
-    marginTop: 15,
-    marginBottom: 15,
-    marginHorizontal: 16,
-    width: 312,
-    height: 68,
+    marginTop: 10, // Reduzido o espaçamento
+    marginBottom: 10, // Reduzido o espaçamento
+    marginHorizontal: 20,
+    width: '80%',
+    height: 50, // Reduzido a altura
   },
   button: {
     borderRadius: 16,
     backgroundColor: '#7DDB5C',
     position: 'relative',
-    marginBottom: 15,
+    marginBottom: 10, // Reduzido o espaçamento
     flexDirection: 'row',
     justifyContent: 'center',
     paddingVertical: 20,
     paddingHorizontal: 1.8,
-    width: 200,
+    width: '60%',
     boxSizing: 'border-box',
-    height: 70
+    height: 60, // Reduzido a altura
   },
   buttonText: {
     overflowWrap: 'break-word',
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 20,
+    fontSize: 18, // Reduzido o tamanho da fonte
     color: '#FFFFFF',
   },
   novoNoReciclApp: {
     marginRight: 8.3,
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 20,
+    fontSize: 18, // Reduzido o tamanho da fonte
     color: '#FFFFFF',
   },
 });
