@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     alignItems: 'center',
-    paddingTop: 30, // Reduzido o espaçamento
-    paddingBottom: 30, // Reduzido o espaçamento
-    paddingHorizontal: 20, // Reduzido o espaçamento
+    paddingTop: 30,
+    paddingBottom: 30,
+    paddingHorizontal: 20,
     width: 'auto',
   },
   telaDeLogin: {
@@ -80,43 +80,43 @@ const styles = StyleSheet.create({
     overflowWrap: 'break-word',
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 20, // Reduzido o tamanho da fonte
+    fontSize: 20,
     color: '#FFFFFF',
   },
   textInput: {
     borderRadius: 16,
     backgroundColor: '#D9D9D9',
-    marginTop: 10, // Reduzido o espaçamento
-    marginBottom: 10, // Reduzido o espaçamento
+    marginTop: 10,
+    marginBottom: 10,
     marginHorizontal: 20,
     width: '80%',
-    height: 50, // Reduzido a altura
+    height: 50,
   },
   button: {
     borderRadius: 16,
     backgroundColor: '#7DDB5C',
     position: 'relative',
-    marginBottom: 10, // Reduzido o espaçamento
+    marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     paddingVertical: 20,
     paddingHorizontal: 1.8,
     width: '60%',
     boxSizing: 'border-box',
-    height: 60, // Reduzido a altura
+    height: 60,
   },
   buttonText: {
     overflowWrap: 'break-word',
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 18, // Reduzido o tamanho da fonte
+    fontSize: 18,
     color: '#FFFFFF',
   },
   novoNoReciclApp: {
     marginRight: 8.3,
     fontFamily: 'Inter',
     fontWeight: '700',
-    fontSize: 18, // Reduzido o tamanho da fonte
+    fontSize: 18,
     color: '#FFFFFF',
   },
 });
