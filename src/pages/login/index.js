@@ -20,7 +20,7 @@ export default function Login({ navigation }) {
           placeholder="Digite sua senha"
           secureTextEntry={true}
         />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
           <Text style={styles.buttonText}>Fazer Login</Text>
         </TouchableOpacity>
         <Text style={styles.novoNoReciclApp}>Novo no ReciclApp?</Text>

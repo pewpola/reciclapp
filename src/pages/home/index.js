@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <View style={styles.home}>
             <View style={styles.container}>
-
+                                
             </View>
         </View>
     )
