@@ -1,7 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-web';
+import { View, Image, StyleSheet } from 'react-native';
 
-export default function HeaderPrincipal() {
-    
-}
+const HeaderPrincipal = () => {
+  return (
+    <View style={{justifyContent: 'center', alignItems:'center'}}>
+      <Image
+        source={require('../../../assets/logo.png')}
+        style={styles.logo}
+      />
+      <View style={styles.hrAbaixoLogo} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  logo: {
+    width: 50,
+    height: 50,
+  },
+  hrAbaixoLogo: {
+    backgroundColor: '#74DA0E',
+    marginBottom: 30,
+    width: 744,
+    height: 5,
+  },
+});
+
+export default Header;
