@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import HeaderPrincipal from '../../components/header-principal';
 import { api } from '../../services/api';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 export interface ProductProps {
   id: number;
@@ -11,7 +13,11 @@ export interface ProductProps {
   cover: string;
 }
 
-export default function Home() {
+interface HomeProps {
+  navigation: StackNavigationProp<any, 'Home'>;
+}
+
+export default function Home({ navigation }: HomeProps) {
   const [products, setProducts] = useState<ProductProps[]>([])
 
   useEffect(() => {
@@ -22,19 +28,31 @@ export default function Home() {
       getProducts()
   }, [])
 
+  const handleProductPress = (productId: number) => {
+    navigation.navigate('ProductDetail', { productId: productId });
+  }
+
+  const handleAddProduct = () => {
+    navigation.navigate('AddProduct');
+  }
+
   return (
     <View style={styles.home}>
       <HeaderPrincipal />
+      <TouchableOpacity style={styles.addButton} onPress={handleAddProduct}>
+        <Text style={styles.addButtonText}>Adicionar Móvel</Text>
+      </TouchableOpacity>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {products.map((product) => (
-          <View key={product.id} style={styles.container}>
-            <img
-            style={styles.cover}
-            src={product.cover}
-            />
+          <TouchableOpacity 
+            key={product.id} 
+            style={styles.container} 
+            onPress={() => handleProductPress(product.id)}
+          >
+            <Image source={{uri: product.cover}} style={styles.cover}/>
             <Text style={styles.nomeMovel}>{product.title}</Text>
             <Text style={styles.precoMovel}>R$ {product.price.toFixed(2)}</Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
@@ -80,5 +98,19 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#000000',
     overflow: 'hidden',
+  },
+  addButton: {
+    backgroundColor: '#7DDB5C',
+    padding: 15,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: 'center',
+    width: '100%',
+  },
+  addButtonText: {
+    fontFamily: 'Inter',
+    fontWeight: '700',
+    fontSize: 18,
+    color: '#FFFFFF',
   },
 });
