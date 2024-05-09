@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { api } from '../../services/api';
+import HeaderPrincipal from '../../components/header-principal';
 
 interface ProductDetailProps {
   route: any;
@@ -41,6 +42,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ route }) => {
 
   return (
     <View style={styles.container}>
+      <HeaderPrincipal/>
       <Image source={{ uri: product.cover }} style={styles.cover} />
       <Text style={styles.title}>{product.title}</Text>
       <Text style={styles.description}>{product.description}</Text>
