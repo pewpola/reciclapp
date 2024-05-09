@@ -1,18 +1,25 @@
 {
-    "products": [
-      { 
-        "id": 1, 
-        "title": "Mesa quebrada para reciclagem", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur" ,
-        "price": 30,
-        "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
-      },
-      { 
-        "id": 2, 
-        "title": "Mesa quebrada para reciclagem", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur" ,
-        "price": 30,
-        "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
-      }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "title": "Mesa quebrada para reciclagem",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur",
+      "price": 30,
+      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Mesa quebrada para reciclagem",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur",
+      "price": 30,
+      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
+    },
+    {
+      "id": 3221,
+      "title": "teste",
+      "description": "teste",
+      "price": 55,
+      "cover": "https://bancodeimagens.procempa.com.br/imgs_p/51b9d9e1ef13d0.51690076"
+    }
+  ]
 }
