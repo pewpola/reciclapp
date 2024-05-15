@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-web';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+// import { TextInput, TouchableOpacity } from 'react-native-web';
 import Header from '../../components/header';
 
 export default function Login({ navigation }) {
