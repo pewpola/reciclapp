@@ -7,7 +7,7 @@ function TabNavigator( {navigation} ) {
   };
 
   const handleNavigateToRecyclingServices = () => {
-    navigation.navigate('ProductDetail');
+    navigation.navigate('RecyclingServices');
   };
 
   return (
