@@ -5,6 +5,7 @@ import CreateAccount from "./pages/create-account";
 import Home from "./pages/home";
 import ProductDetail from './pages/product-detail';
 import AddProduct from "./pages/add-product";
+import MeusMoveis from "./pages/meus-moveis";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const Navigation = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="ProductDetail" component={ProductDetail} />
         <Stack.Screen name="AddProduct" component={AddProduct}/>
+        <Stack.Screen name="MeusMoveis" component={MeusMoveis}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
