@@ -1,17 +1,25 @@
+import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import AddProduct from '../../pages/add-product';
+import ProductDetail from '../../pages/product-detail';
+import Navigation from '../../navigation';
 
-interface TabNavigatorProps {
-  onPressMyFurniture: () => void;
-  onPressRecyclingServices: () => void;
-}
+function TabNavigator( {navigation} ) {
+  const handleNavigateToAddProduct = () => {
+    navigation.navigate('AddProduct');
+  };
 
-function TabNavigator({ onPressMyFurniture, onPressRecyclingServices }: TabNavigatorProps) {
+  const handleNavigateToRecyclingServices = () => {
+    navigation.navigate('ProductDetail');
+  };
+
   return (
     <View style={styles.tabContainer}>
-      <TouchableOpacity style={styles.tabButton} onPress={onPressMyFurniture}>
+      <TouchableOpacity style={styles.tabButton} onPress={handleNavigateToAddProduct}>
         <Text style={styles.tabButtonText}>Meus Móveis</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.tabButton} onPress={onPressRecyclingServices}>
+      <TouchableOpacity style={styles.tabButton} onPress={handleNavigateToRecyclingServices}>
         <Text style={styles.tabButtonText}>Serviços de Reciclagem</Text>
       </TouchableOpacity>
     </View>
