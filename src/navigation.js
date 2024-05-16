@@ -8,6 +8,7 @@ import AddProduct from "./pages/add-product";
 import MeusMoveis from "./pages/meus-moveis";
 import RecyclingServices from "./pages/servico-reciclagem";
 import SuccessScreen from "./pages/sucesso-ao-solicitar";
+import EditProduct from "./pages/edit-product";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const Navigation = () => {
         <Stack.Screen name="MeusMoveis" component={MeusMoveis}/>
         <Stack.Screen name="RecyclingServices" component={RecyclingServices}/>
         <Stack.Screen name="SuccessScreen" component={SuccessScreen}/>
+        <Stack.Screen name="EditProduct" component={EditProduct}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
