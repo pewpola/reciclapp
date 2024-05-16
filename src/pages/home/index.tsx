@@ -40,9 +40,6 @@ export default function Home({ navigation }: HomeProps) {
   return (
     <View style={styles.home}>
       <HeaderPrincipal />
-      <TouchableOpacity style={styles.addButton} onPress={handleAddProduct}>
-        <Text style={styles.addButtonText}>Adicionar Móvel</Text>
-      </TouchableOpacity>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {products.map((product) => (
           <TouchableOpacity 
