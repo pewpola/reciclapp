@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import HeaderPrincipal from '../../components/header-principal';
 import { api } from '../../services/api';
 import { StackNavigationProp } from '@react-navigation/stack';
+import TabNavigator from '../../components/tab-navigator';
 
 export interface ProductProps {
   id: number;
@@ -55,6 +56,7 @@ export default function Home({ navigation }: HomeProps) {
           </TouchableOpacity>
         ))}
       </ScrollView>
+      <TabNavigator navigation={navigation} />
     </View>
   );
 }
