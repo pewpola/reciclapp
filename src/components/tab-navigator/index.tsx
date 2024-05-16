@@ -1,13 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import AddProduct from '../../pages/add-product';
-import ProductDetail from '../../pages/product-detail';
-import Navigation from '../../navigation';
 
 function TabNavigator( {navigation} ) {
   const handleNavigateToAddProduct = () => {
-    navigation.navigate('AddProduct');
+    navigation.navigate('MeusMoveis');
   };
 
   const handleNavigateToRecyclingServices = () => {
