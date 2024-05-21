@@ -31,7 +31,7 @@ export default function AddProduct({ navigation }) {
             setProductDescription('');
             setProductCover('');
 
-            navigation.navigate('Home');
+            navigation.navigate('AddSuccess');
         } catch (error) {
             console.error("Erro ao adicionar produto:", error);
         }
