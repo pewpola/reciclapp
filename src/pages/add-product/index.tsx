@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { api } from '../../services/api';
 import HeaderPrincipal from '../../components/header-principal';
 
@@ -10,6 +10,11 @@ export default function AddProduct({ navigation }) {
     const [productCover, setProductCover] = useState('');
 
     const handleAddProduct = async () => {
+        if (!productName || !productPrice || !productDescription || !productCover) {
+            Alert.alert("Erro", "Por favor, preencha todos os campos.");
+            return;
+        }
+
         try {
             const productId = Math.floor(Math.random() * 10000) + 1;
 
@@ -34,7 +39,7 @@ export default function AddProduct({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <HeaderPrincipal/>
+            <HeaderPrincipal />
             <Text style={styles.label}>Nome do móvel:</Text>
             <TextInput
                 style={styles.input}
