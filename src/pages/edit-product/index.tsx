@@ -42,7 +42,7 @@ export default function EditProduct({ route, navigation }) {
             setProductDescription('');
             setProductCover('');
 
-            navigation.navigate('Home');
+            navigation.navigate('EditSuccess');
         } catch (error) {
             console.error("Erro ao editar produto:", error);
         }
