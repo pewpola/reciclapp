@@ -12,6 +12,8 @@ import EditProduct from "./pages/edit-product";
 import AddSuccess from "./pages/sucesso-ao-adicionar";
 import EditSuccess from "./pages/sucesso-ao-editar";
 import ProfileScreen from "./pages/perfil";
+import EditarLocalizacaoScreen from "./pages/edit-local";
+import EditarMeiosDeContatoScreen from "./pages/edit-contact";
 
 const Stack = createStackNavigator();
 
@@ -31,6 +33,8 @@ const Navigation = () => {
         <Stack.Screen name="AddSuccess" component={AddSuccess}/>
         <Stack.Screen name="EditSuccess" component={EditSuccess}/>
         <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
+        <Stack.Screen name="EditarLocalizacaoScreen" component={EditarLocalizacaoScreen}/>
+        <Stack.Screen name="EditarMeiosDeContatoScreen" component={EditarMeiosDeContatoScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
