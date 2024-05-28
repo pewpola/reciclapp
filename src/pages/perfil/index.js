@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import HeaderPrincipal from '../../components/header-principal';
 import TabNavigator from '../../components/tab-navigator';
 import { useNavigation } from '@react-navigation/native';
+import CallSupportScreen from '../call-support';
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -19,6 +20,10 @@ const ProfileScreen = () => {
     navigation.navigate('EditarMeiosDeContatoScreen');
   };
 
+  const navigateToSupport = () => {
+    navigation.navigate('CallSupportScreen')
+  }
+
   return (
     <View style={styles.container}>
       <HeaderPrincipal />
@@ -29,7 +34,7 @@ const ProfileScreen = () => {
         <TouchableOpacity style={styles.optionButton} onPress={navigateToContact}>
           <Text style={styles.optionText}>Editar Meios de Contato</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.optionButton}>
+        <TouchableOpacity style={styles.optionButton} onPress={navigateToSupport}>
           <Text style={styles.optionText}>Chamar Suporte</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.optionButton} onPress={handleLogout}>
