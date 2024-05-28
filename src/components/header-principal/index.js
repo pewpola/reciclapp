@@ -9,6 +9,10 @@ const HeaderPrincipal = () => {
     navigation.navigate('Home');
   };
 
+  const handlePerfilPress = () => {
+    navigation.navigate('ProfileScreen');
+  };
+
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={handleLogoPress} style={styles.logoContainer}>
@@ -17,10 +21,12 @@ const HeaderPrincipal = () => {
           style={styles.logo}
         />
       </TouchableOpacity>
-      <Image
-        source={require('../../../assets/perfil.png')}
-        style={styles.perfil}
-      />
+      <TouchableOpacity onPress={handlePerfilPress} style={styles.perfilContainer}>
+        <Image
+          source={require('../../../assets/perfil.png')}
+          style={styles.perfil}
+        />
+      </TouchableOpacity>
       <View style={styles.hrAbaixoLogo} />
     </View>
   );
@@ -33,21 +39,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     position: 'relative',
     marginBottom: 30,
+    flexDirection: 'row',
   },
   logoContainer: {
-    position: 'relative',
-    zIndex: 1,
+    flex: 1,
+    alignItems: 'center',
   },
   logo: {
     width: 50,
     height: 50,
   },
-  perfil: {
-    width: 50,
-    height: 50,
+  perfilContainer: {
     position: 'absolute',
     right: 20,
     top: 0,
+    zIndex: 1,
+  },
+  perfil: {
+    width: 50,
+    height: 50,
   },
   hrAbaixoLogo: {
     backgroundColor: '#74DA0E',
