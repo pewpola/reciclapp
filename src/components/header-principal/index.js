@@ -1,12 +1,22 @@
-import { View, Image, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const HeaderPrincipal = () => {
+  const navigation = useNavigation();
+
+  const handleLogoPress = () => {
+    navigation.navigate('Home');
+  };
+
   return (
-    <View style={{justifyContent: 'center', alignItems:'center'}}>
-      <Image
-        source={require('../../../assets/logo.png')}
-        style={styles.logo}
-      />
+    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+      <TouchableOpacity onPress={handleLogoPress}>
+        <Image
+          source={require('../../../assets/logo.png')}
+          style={styles.logo}
+        />
+      </TouchableOpacity>
       <View style={styles.hrAbaixoLogo} />
     </View>
   );
