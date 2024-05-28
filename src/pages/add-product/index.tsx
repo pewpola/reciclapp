@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { api } from '../../services/api';
 import HeaderPrincipal from '../../components/header-principal';
+import TabNavigator from '../../components/tab-navigator';
 
 export default function AddProduct({ navigation }) {
     const [productName, setProductName] = useState('');
@@ -74,6 +75,8 @@ export default function AddProduct({ navigation }) {
             <TouchableOpacity style={styles.button} onPress={handleAddProduct}>
                 <Text style={styles.buttonText}>Adicionar</Text>
             </TouchableOpacity>
+
+            <TabNavigator navigation={navigation}/>
         </View>
     );
 }
