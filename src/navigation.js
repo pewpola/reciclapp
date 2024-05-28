@@ -11,6 +11,7 @@ import SuccessScreen from "./pages/sucesso-ao-solicitar";
 import EditProduct from "./pages/edit-product";
 import AddSuccess from "./pages/sucesso-ao-adicionar";
 import EditSuccess from "./pages/sucesso-ao-editar";
+import ProfileScreen from "./pages/perfil";
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,7 @@ const Navigation = () => {
         <Stack.Screen name="EditProduct" component={EditProduct}/>
         <Stack.Screen name="AddSuccess" component={AddSuccess}/>
         <Stack.Screen name="EditSuccess" component={EditSuccess}/>
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
