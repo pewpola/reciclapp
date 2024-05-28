@@ -14,6 +14,10 @@ import EditSuccess from "./pages/sucesso-ao-editar";
 import ProfileScreen from "./pages/perfil";
 import EditarLocalizacaoScreen from "./pages/edit-local";
 import EditarMeiosDeContatoScreen from "./pages/edit-contact";
+import EditContactSuccess from "./pages/sucesso-ao-editar-contato";
+import EditLocalSuccess from "./pages/sucesso-ao-editar-local";
+import CallSupportSuccess from "./pages/sucesso-no-suporte";
+import CallSupportScreen from "./pages/call-support";
 
 const Stack = createStackNavigator();
 
@@ -35,6 +39,10 @@ const Navigation = () => {
         <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
         <Stack.Screen name="EditarLocalizacaoScreen" component={EditarLocalizacaoScreen}/>
         <Stack.Screen name="EditarMeiosDeContatoScreen" component={EditarMeiosDeContatoScreen}/>
+        <Stack.Screen name="EditContactSuccess" component={EditContactSuccess}/>
+        <Stack.Screen name="EditLocalSuccess" component={EditLocalSuccess}/>
+        <Stack.Screen name="CallSupportSuccess" component={CallSupportSuccess}/>
+        <Stack.Screen name="CallSupportScreen" component={CallSupportScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
