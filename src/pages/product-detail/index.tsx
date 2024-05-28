@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { api } from '../../services/api';
 import HeaderPrincipal from '../../components/header-principal';
+import TabNavigator from '../../components/tab-navigator';
 
 interface ProductDetailProps {
   route: any;
@@ -47,6 +48,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ route }) => {
       <Text style={styles.title}>{product.title}</Text>
       <Text style={styles.description}>{product.description}</Text>
       <Text style={styles.price}>Preço: R$ {product.price.toFixed(2)}</Text>
+      <TabNavigator navigation={navigator}/>
     </View>
   );
 };
