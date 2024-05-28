@@ -1,25 +1,32 @@
 {
   "products": [
     {
-      "id": "1",
       "title": "Mesa quebrada para reciclagem",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur",
-      "price": 30,
-      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
+      "price": 35,
+      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg",
+      "id": "1"
     },
     {
-      "id": "2",
       "title": "Mesa quebrada para reciclagem",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio sit amet ante iaculis efficitur",
-      "price": 30,
-      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg"
+      "price": 70,
+      "cover": "https://estudiorain.com/wp-content/uploads/2022/07/MESA-QUEBRADA_02.jpg",
+      "id": "2"
     },
     {
-      "id": 3221,
-      "title": "teste",
+      "title": "Conjunto de móveis quebrados",
       "description": "teste",
-      "price": 55,
-      "cover": "https://bancodeimagens.procempa.com.br/imgs_p/51b9d9e1ef13d0.51690076"
+      "price": 75,
+      "cover": "https://bancodeimagens.procempa.com.br/imgs_p/51b9d9e1ef13d0.51690076",
+      "id": "3221"
+    },
+    {
+      "id": "7137",
+      "title": "Gaveteiro quebrado para reciclagem",
+      "description": "gaveteiro quebrado para reciclagem",
+      "price": 20,
+      "cover": "https://static.tudointeressante.com.br/uploads/2020/02/moveis-quebrados-7.jpg"
     }
   ]
 }
