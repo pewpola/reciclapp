@@ -51,6 +51,7 @@ export default function EditProduct({ route, navigation }) {
     return (
         <View style={styles.container}>
             <HeaderPrincipal/>
+            <Text style={styles.title}>Editar Móvel</Text>
             <Text style={styles.label}>Nome do móvel:</Text>
             <TextInput
                 style={styles.input}
@@ -93,6 +94,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF',
         padding: 20,
+    },
+    title: {
+        fontFamily: 'Inter',
+        fontWeight: '700',
+        fontSize: 24,
+        textAlign: 'center',
+        marginVertical: 20,
     },
     label: {
         fontFamily: 'Inter',

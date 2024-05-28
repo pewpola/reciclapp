@@ -24,6 +24,7 @@ export default function RecyclingServices({ navigation }: RecyclingServicesProps
     return (
         <View style={styles.container}>
             <HeaderPrincipal />
+            <Text style={styles.title}>Solicitar serviço de reciclagem</Text>
             <Text style={styles.label}>Tipo do serviço:</Text>
             <TextInput
                 style={styles.input}
@@ -58,6 +59,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF',
         padding: 20,
+    },
+    title: {
+        fontFamily: 'Inter',
+        fontWeight: '700',
+        fontSize: 24,
+        textAlign: 'center',
+        marginVertical: 20,
     },
     label: {
         fontFamily: 'Inter',
