@@ -22,14 +22,18 @@ export default function MeusMoveis({ navigation }: HomeProps) {
 
   useEffect(() => {
     async function getProducts() {
-      const response = await api.get("/products");
-      setProducts(response.data);
+      try {
+        const response = await api.get("/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+      }
     }
     getProducts();
   }, []);
 
   const handleProductPress = (productId: number) => {
-    navigation.navigate('ProductDetail', { productId: productId });
+    navigation.navigate('ProductDetail', { productId });
   };
 
   const handleAddProduct = () => {
@@ -37,11 +41,16 @@ export default function MeusMoveis({ navigation }: HomeProps) {
   };
 
   const handleEditProduct = (productId: number) => {
-    navigation.navigate('EditProduct', { productId: productId });
+    navigation.navigate('EditProduct', { productId });
   };
 
-  const handleRemoveProduct = (productId: number) => {
-    setProducts(products.filter(product => product.id !== productId));
+  const handleRemoveProduct = async (productId: number) => {
+    try {
+      await api.delete(`/products/${productId}`);
+      setProducts(products.filter(product => product.id !== productId));
+    } catch (error) {
+      console.error('Erro ao remover produto:', error);
+    }
   };
 
   return (
