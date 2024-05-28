@@ -10,28 +10,51 @@ const HeaderPrincipal = () => {
   };
 
   return (
-    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-      <TouchableOpacity onPress={handleLogoPress}>
+    <View style={styles.header}>
+      <TouchableOpacity onPress={handleLogoPress} style={styles.logoContainer}>
         <Image
           source={require('../../../assets/logo.png')}
           style={styles.logo}
         />
       </TouchableOpacity>
+      <Image
+        source={require('../../../assets/perfil.png')}
+        style={styles.perfil}
+      />
       <View style={styles.hrAbaixoLogo} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  header: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    marginBottom: 30,
+  },
+  logoContainer: {
+    position: 'relative',
+    zIndex: 1,
+  },
   logo: {
     width: 50,
     height: 50,
   },
+  perfil: {
+    width: 50,
+    height: 50,
+    position: 'absolute',
+    right: 20,
+    top: 0,
+  },
   hrAbaixoLogo: {
     backgroundColor: '#74DA0E',
-    marginBottom: 30,
-    width: 744,
+    width: '100%',
     height: 5,
+    position: 'absolute',
+    bottom: -20,
   },
 });
 
