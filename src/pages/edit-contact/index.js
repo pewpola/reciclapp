@@ -1,17 +1,21 @@
-import React from 'react';
-import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import HeaderPrincipal from '../../components/header-principal';
 import TabNavigator from '../../components/tab-navigator';
 import { useNavigation } from '@react-navigation/native';
 
 const EditarMeiosDeContatoScreen = () => {
+  const [email, setEmail] = useState('');
+  const [telefone, setTelefone] = useState('');
+
   const navigation = useNavigation();
 
-  const handleLogout = () => {
-    navigation.navigate('Login');
-  };
-
   const handleEditContact = () => {
+    if (email && telefone) {
+      navigation.navigate('EditContactSuccess');
+    } else {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+    }
   };
 
   return (
@@ -25,17 +29,21 @@ const EditarMeiosDeContatoScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Digite seu e-mail"
+          value={email}
+          onChangeText={setEmail}
         />
         <Text style={styles.label}>Telefone:</Text>
         <TextInput
           style={styles.input}
           placeholder="Digite seu telefone"
+          value={telefone}
+          onChangeText={setTelefone}
         />
         <TouchableOpacity style={styles.editButton} onPress={handleEditContact}>
           <Text style={styles.editButtonText}>Editar Contato</Text>
         </TouchableOpacity>
       </View>
-      <TabNavigator />
+      <TabNavigator navigation={navigation} />
     </View>
   );
 };
@@ -76,7 +84,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   editButton: {
-    backgroundColor: '#7DDB5C',
+    backgroundColor: '#FFA500',
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
