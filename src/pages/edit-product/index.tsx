@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
 import { api } from '../../services/api';
 import HeaderPrincipal from '../../components/header-principal';
+import TabNavigator from '../../components/tab-navigator';
 
 export default function EditProduct({ route, navigation }) {
     const { productId } = route.params;
@@ -85,6 +86,7 @@ export default function EditProduct({ route, navigation }) {
             <TouchableOpacity style={styles.button} onPress={handleEditProduct}>
                 <Text style={styles.buttonText}>Editar</Text>
             </TouchableOpacity>
+            <TabNavigator navigation={navigation} />
         </View>
     );
 }
