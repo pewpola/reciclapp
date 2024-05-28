@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, StyleSheet, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import HeaderPrincipal from '../../components/header-principal';
 import { api } from '../../services/api';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -21,13 +21,20 @@ interface HomeProps {
 export default function Home({ navigation }: HomeProps) {
   const [products, setProducts] = useState<ProductProps[]>([])
 
-  useEffect(() => {
-      async function getProducts() {
-          const response = await api.get("/products")
-          setProducts(response.data)
-      }
-      getProducts()
-  }, [])
+  const getProducts = async () => {
+    try {
+      const response = await api.get('/products');
+      setProducts(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar produtos:', error);
+    }
+  };
+
+  useFocusEffect(
+    useCallback(() => {
+      getProducts();
+    }, [])
+  );
 
   const handleProductPress = (productId: number) => {
     navigation.navigate('ProductDetail', { productId: productId });
